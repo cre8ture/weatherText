@@ -1,0 +1,11 @@
+.strand {
+    position: absolute;
+    white-space: nowrap;
+    transform: rotate(-10deg) skewY(-20deg);
+    animation: sway 2s infinite alternate;
+}
+
+@keyframes sway {
+    from { transform: rotate(-10deg) skewY(-20deg); }
+    to { transform: rotate(10deg) skewY(20deg); }
+}
