@@ -5,7 +5,28 @@
     animation: sway 2s infinite alternate;
 }
 
+.strand .inner {
+    position: relative; /* Added to act as a stable container */
+}
+
 @keyframes sway {
     from { transform: rotate(-10deg) skewY(-20deg); }
     to { transform: rotate(10deg) skewY(20deg); }
+}
+
+span {
+    /* ... other styles ... */
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1); /* Adjust time and easing function */
+}
+
+#mouse-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    z-index: 1000;
 }
